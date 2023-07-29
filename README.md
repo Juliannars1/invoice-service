@@ -31,12 +31,16 @@ Realiza una solicitud HTTP POST para agregar una nueva factura:
 **POST** http://localhost:8080/invoices
 
 Body:
+
+```json
 {
-"Number": "INV001",
-"Customer": "Juan",
-"Items": [{"Name": "arroz", "Quantity": 3, "Price": 200}],
-"TotalAmount": 500000
+  "Number": "INV001",
+  "Customer": "Juan",
+  "Items": [{ "Name": "arroz", "Quantity": 3, "Price": 200 }],
+  "TotalAmount": 500000
 }
+```
+
 Puedes utilizar herramientas como Postman o incluso realizar la solicitud desde tu propio código.
 
 Nota: Asegúrate de tener el servicio en ejecución (docker-compose up -d) antes de realizar la solicitud POST.
@@ -56,12 +60,15 @@ Realiza una solicitud HTTP PUT a la siguiente ruta para actualizar una factura e
 Reemplaza {Number} con el número de la factura que deseas actualizar. Incluye en el cuerpo de la solicitud los campos que deseas modificar. Por ejemplo, para actualizar la factura con el número "INV001":
 PUT http://localhost:8080/invoices/INV001
 Body:
+
+```json
 {
-"Number": "INV001",
-"Customer": "Pedro",
-"Items": [{"Name": "arroz", "Quantity": 5, "Price": 200}],
-"TotalAmount": 1000
+  "Number": "INV001",
+  "Customer": "Pedro",
+  "Items": [{ "Name": "arroz", "Quantity": 5, "Price": 200 }],
+  "TotalAmount": 1000
 }
+```
 
 #### Eliminar una factura (DELETE)
 
