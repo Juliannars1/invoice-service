@@ -6,11 +6,10 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"vendor/golang.org/x/net/route"
 )
 
 func main() {
-	router := 
+	router := routes.setupRoutes()
 	
 	server := &http.Server{
         Addr:    ":8080",
