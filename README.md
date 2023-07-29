@@ -4,7 +4,8 @@ Invoice-Service es un proyecto que proporciona un servicio para gestionar factur
 
 ## Requisitos previos
 
-Antes de comenzar, asegúrate de tener instalado Docker y Docker Compose en tu sistema. Puedes descargar Docker desde su sitio web oficial: [https://www.docker.com/get-started](https://www.docker.com/get-started)
+Antes de comenzar, asegúrate de tener instalado Docker y Docker Compose en tu sistema. Puedes descargar Docker desde su sitio web
+oficial: [https://www.docker.com/get-started](https://www.docker.com/get-started)
 
 ## Inicialización y creación de contenedores
 
@@ -16,7 +17,8 @@ Para iniciar el servicio, sigue estos pasos:
 
 2. Construye y levanta los contenedores utilizando Docker Compose:
    `docker-compose up`
-   Esto creará y pondrá en funcionamiento los contenedores de MongoDB y Golang definidos en el archivo `docker-compose.yml`. El servicio de Invoice-Service estará ahora accesible.
+   Esto creará y pondrá en funcionamiento los contenedores de MongoDB y Golang definidos en el archivo `docker-compose.yml`. El
+   servicio de Invoice-Service estará ahora accesible.
 
 3. Verifica que los contenedores están en ejecución:
    `docker-compose ps`
@@ -61,8 +63,10 @@ Realiza una solicitud HTTP PUT a la siguiente ruta para actualizar una factura e
 
 **PUT** http://localhost:8080/invoices/{Number}
 
-Reemplaza {Number} con el número de la factura que deseas actualizar. Incluye en el cuerpo de la solicitud los campos que deseas modificar. Por ejemplo, para actualizar la factura con el número "INV001":
+Reemplaza {Number} con el número de la factura que deseas actualizar. Incluye en el cuerpo de la solicitud los campos que deseas
+modificar. Por ejemplo, para actualizar la factura con el número "INV001":
 **PUT** http://localhost:8080/invoices/INV001
+
 Body:
 
 ```json
@@ -79,7 +83,8 @@ Body:
 Realiza una solicitud HTTP DELETE a la siguiente ruta para eliminar una factura específica por su "Number":
 **DELETE** http://localhost:8080/invoices/{Number}
 
-Reemplaza {Number} con el número de la factura que deseas eliminar. Por ejemplo, para eliminar la factura con el número "INV001":
+Reemplaza {Number} con el número de la factura que deseas eliminar.
+Por ejemplo, para eliminar la factura con el número "INV001":
 **DELETE** http://localhost:8080/invoices/INV001
 
 ## Personalización
