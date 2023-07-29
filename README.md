@@ -48,7 +48,8 @@ Realiza una solicitud HTTP GET a la siguiente ruta para obtener una factura espe
 Reemplaza {Number} con el número de la factura que deseas obtener. Por ejemplo, para obtener la factura con el número "INV001":
 GET http://localhost:8080/invoices/INV001
 
-####Actualizar una factura (UPDATE)
+#### Actualizar una factura (UPDATE)
+
 Realiza una solicitud HTTP PUT a la siguiente ruta para actualizar una factura específica por su "Number":
 **PUT** http://localhost:8080/invoices/{Number}
 
@@ -61,15 +62,19 @@ Body:
 "Items": [{"Name": "arroz", "Quantity": 5, "Price": 200}],
 "TotalAmount": 1000
 }
-####Eliminar una factura (DELETE)
+
+#### Eliminar una factura (DELETE)
+
 Realiza una solicitud HTTP DELETE a la siguiente ruta para eliminar una factura específica por su "Number":
 **DELETE** http://localhost:8080/invoices/{Number}
 
 Reemplaza {Number} con el número de la factura que deseas eliminar. Por ejemplo, para eliminar la factura con el número "INV001":
 DELETE http://localhost:8080/invoices/INV001
 
-##Personalización
+## Personalización
+
 Si deseas personalizar la configuración del servicio, puedes modificar el archivo `docker-compose.yml` y ajustar los parámetros según tus necesidades. Además, puedes agregar nuevas funcionalidades y características al servicio Invoice-Service desarrollando en el lenguaje de programación Golang.
 
-##Contribución
+## Contribución
+
 Si deseas contribuir a este proyecto, por favor, realiza un fork del repositorio y crea una rama para tu contribución. Luego, envía un pull request cuando estés listo para que revisemos tus cambios.
