@@ -31,8 +31,6 @@ Realiza una solicitud HTTP POST para agregar una nueva factura:
 **POST** http://localhost:8080/invoices
 
 Body:
-
-```json
 {
 "Number": "INV001",
 "Customer": "Juan",
@@ -44,6 +42,7 @@ Puedes utilizar herramientas como Postman o incluso realizar la solicitud desde 
 Nota: Asegúrate de tener el servicio en ejecución (docker-compose up -d) antes de realizar la solicitud POST.
 
 #### Obtener una factura específica (GET)
+
 Realiza una solicitud HTTP GET a la siguiente ruta para obtener una factura específica por su "Number":
 **GET** http://localhost:8080/invoices/{Number}
 Reemplaza {Number} con el número de la factura que deseas obtener. Por ejemplo, para obtener la factura con el número "INV001":
@@ -55,11 +54,12 @@ Realiza una solicitud HTTP PUT a la siguiente ruta para actualizar una factura e
 
 Reemplaza {Number} con el número de la factura que deseas actualizar. Incluye en el cuerpo de la solicitud los campos que deseas modificar. Por ejemplo, para actualizar la factura con el número "INV001":
 PUT http://localhost:8080/invoices/INV001
+Body:
 {
-  "Number": "INV001",
-  "Customer": "Pedro",
-  "Items": [{"Name": "arroz", "Quantity": 5, "Price": 200}],
-  "TotalAmount": 1000
+"Number": "INV001",
+"Customer": "Pedro",
+"Items": [{"Name": "arroz", "Quantity": 5, "Price": 200}],
+"TotalAmount": 1000
 }
 ####Eliminar una factura (DELETE)
 Realiza una solicitud HTTP DELETE a la siguiente ruta para eliminar una factura específica por su "Number":
@@ -73,4 +73,3 @@ Si deseas personalizar la configuración del servicio, puedes modificar el archi
 
 ##Contribución
 Si deseas contribuir a este proyecto, por favor, realiza un fork del repositorio y crea una rama para tu contribución. Luego, envía un pull request cuando estés listo para que revisemos tus cambios.
-```
